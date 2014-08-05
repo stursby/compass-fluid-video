@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="http://prismjs.com/themes/prism.css">
+    <link rel="stylesheet" type="text/css" href="http://prismjs.com/plugins/show-language/prism-show-language.css">
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" type="text/css" href="stylesheets/compass-fluid-video-demo.css">
+</head>
+<body>
+
+    <h1>Compass Fluid Video</h1>
+
+    <h3>Installation</h3>
+
+<pre><code class="language-bash">gem install compass-fluid-video
+</code></pre>    
+
+    <p>The only <strong>requirement</strong> of this plugin is that your wrap your video inside a container, like so:</p>
+
+<pre><code class="language-markup">&lt;div class="video-container"&gt;
+    &lt;!-- video code here --&gt;
+&lt;/div&gt;
+</code></pre>
+
+    <p>Next, import the <code class="inline">compass-fluid-video</code> extension and then include it inside your container class.</p>
+
+<pre><code class="language-scss">@import 'compass-fluid-video';
+
+.video-container {
+    @include fluid-video;
+}
+</code></pre>
+
+    <h1>Examples</h1>
+
+    <section>
+            
+        <h2>HTML5</h2>
+
+        <div class="video-container">
+            <video width="320" height="240" controls>
+                <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+                <source src="http://clips.vorwaerts-gmbh.de/VfE.ogv" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>Vimeo</h2>
+
+        <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/100872038?title=0&amp;byline=0&amp;portrait=0&amp;badge=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>YouTube</h2>
+
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/h33H91Ipyy4" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+    </section>
+
+    <section>
+        
+        <h2>Custom Dimensions</h2>
+
+        <p>For a custom size video, simply provide desired ratio dimensions (width, height) and the video will be scaled automagically.</p>
+
+<pre><code class="language-scss">.custom {
+    @include fluid-video($width: 500, $height: 214);
+    // shorthand syntax:
+    // @include fluid-video(500, 214);
+}
+</code></pre>
+
+        <br>
+
+        <div class="video-container custom">
+            <iframe src="https://player.vimeo.com/video/58511112?title=0&amp;byline=0&amp;portrait=0&amp;badge=0" width="500" height="214" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+
+    </section>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+    
+</body>
+</html>
