@@ -1,0 +1,21 @@
+@import 'compass-fluid-video';
+
+/*
+The only requirement of this extension is that your wrap your video inside a 
+container, for example a <div> with a class of "video-container".
+Out of the box this supports 16:9 ratio videos.
+*/
+
+.video-container {
+    @include fluid-video;
+}
+
+/*
+To use a custom ratio, simply provideo a width and height.
+*/
+
+.custom {
+    @include fluid-video($width: 500, $height: 214);
+    // shorthand syntax:
+    // @include fluid-video(500, 214);
+}

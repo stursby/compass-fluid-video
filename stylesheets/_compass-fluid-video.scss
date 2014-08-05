@@ -1,0 +1,30 @@
+.container {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin fluid-video(
+    $width: null,
+    $height: null) {
+
+    @extend .container;
+    
+    @if ($width and $height) {
+        padding-bottom: percentage($height / $width);
+    } @else {
+        padding-bottom: 56.25%;
+    }
+
+    & > iframe, object, embed, video  {
+        @extend .video;
+    }
+}
