@@ -1,0 +1,7 @@
+{
+  "name": "Compass Fluid Video",
+  "description": "A Compass extension for making fluid videos.",
+  "tags": ["video, fluid, embed, responsive"],
+  "website": "https://github.com/stursby/compass-fluid-video",
+  "docs": "http://stursby.github.io/compass-fluid-video"
+}
