@@ -1,4 +1,4 @@
-.container {
+.video-container {
     position: relative;
     height: 0;
     overflow: hidden;
@@ -16,7 +16,7 @@
     $width: null,
     $height: null) {
 
-    @extend .container;
+    @extend .video-container;
     
     @if ($width and $height) {
         padding-bottom: percentage($height / $width);
